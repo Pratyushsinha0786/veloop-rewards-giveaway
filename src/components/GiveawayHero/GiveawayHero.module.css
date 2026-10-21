@@ -1,0 +1,135 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  padding: 4.5rem 1.5rem 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.glowBg {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(0, 210, 157, 0.16) 0%, rgba(56, 189, 248, 0.1) 40%, transparent 75%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 210, 157, 0.1);
+  border: 1px solid rgba(0, 210, 157, 0.3);
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+  animation: blinkDot 2s infinite ease-in-out;
+}
+
+.liveText {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-green);
+}
+
+.sparkleIcon {
+  color: var(--accent-green);
+}
+
+.heroHeading {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.gradientLine {
+  background: linear-gradient(135deg, #00d29d 15%, #38bdf8 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subtext {
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--accent-green), #00b889);
+  color: #050b14;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 210, 157, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 210, 157, 0.45);
+}
+
+.arrowIcon {
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes blinkDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveDot, .arrowIcon {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 3rem 1rem 4.5rem;
+  }
+}

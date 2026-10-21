@@ -1,0 +1,6 @@
+{
+  "name": "VELOOP Rewards – Giveaways",
+  "description": "Turn your VELOOP balances into real rewards and giveaways with transparent, provably fair draws.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

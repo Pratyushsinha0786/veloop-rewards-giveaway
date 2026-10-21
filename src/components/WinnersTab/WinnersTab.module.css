@@ -1,0 +1,249 @@
+.section {
+  width: 100%;
+  padding: 3rem 1.25rem 5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(13, 23, 38, 0.4) 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.tabPillContainer {
+  display: flex;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  color: var(--text-primary);
+}
+
+.tabBtnActive {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: var(--accent-blue);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.tabContent {
+  width: 100%;
+}
+
+.liveNoticeCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.clockIconWrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.clockIcon {
+  color: var(--accent-amber);
+}
+
+.noticeHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.noticeBody {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  max-width: 580px;
+}
+
+.noticeBulletList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.noticeBullet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  background-color: rgba(26, 42, 68, 0.4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+.bulletIcon {
+  color: var(--accent-green);
+}
+
+.pastList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pastCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.giveawayMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.giveawayTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.giveawaySubMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.metaDot {
+  opacity: 0.5;
+}
+
+.winnerCountBadge {
+  background-color: rgba(0, 210, 157, 0.12);
+  border: 1px solid rgba(0, 210, 157, 0.3);
+  color: var(--accent-green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.drawnTag {
+  background-color: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.winnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.winnerChip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(5, 11, 20, 0.6);
+  border: 1px solid rgba(26, 42, 68, 0.7);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.trophyIcon {
+  color: var(--accent-amber);
+  flex-shrink: 0;
+}
+
+.maskedId {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.wonPrize {
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.emptyCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}

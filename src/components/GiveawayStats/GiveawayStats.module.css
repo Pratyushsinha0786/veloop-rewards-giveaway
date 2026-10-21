@@ -1,0 +1,120 @@
+.statsContainer {
+  max-width: 1140px;
+  margin: -2.5rem auto 2.5rem;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.statsBar {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  box-shadow: 0 12px 30px rgba(5, 11, 20, 0.7);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-right: 1px solid rgba(26, 42, 68, 0.6);
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statItemHighlight {
+  background: rgba(0, 210, 157, 0.04);
+  border-radius: 10px;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(26, 42, 68, 0.5);
+  border: 1px solid var(--border-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconRadio {
+  color: var(--accent-green);
+}
+
+.iconUsers {
+  color: var(--accent-blue);
+}
+
+.iconDelivered {
+  color: #a78bfa;
+}
+
+.iconClock {
+  color: var(--accent-amber);
+}
+
+.statDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.monoTimer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  color: var(--accent-amber);
+  white-space: nowrap;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .statsBar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .statItem:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .statsContainer {
+    margin-top: -1.5rem;
+  }
+  .statsBar {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  .statItem {
+    border-right: none;
+    border-bottom: 1px solid rgba(26, 42, 68, 0.6);
+    padding-bottom: 0.75rem;
+  }
+  .statItem:last-child {
+    border-bottom: none;
+  }
+}
